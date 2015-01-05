@@ -5,6 +5,8 @@
 var path = require('path'),
     config;
 
+console.log(process.env.GHOST_EMAIL)
+
 config = {
     // ### Development **(default)**
     development: {
