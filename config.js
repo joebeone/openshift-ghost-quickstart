@@ -11,20 +11,7 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         url: 'http://my-ghost-blog.com',
 
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+
 
         database: {
             client: 'sqlite3',
@@ -49,7 +36,32 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://'+process.env.OPENSHIFT_APP_DNS,
-        mail: {},
+        mail: {
+
+           transport: 'SMTP', 
+           options: {
+              service:  'Gmail', 
+              auth: {
+                email: process.env.GHOST_EMAIL,
+                pass: process.env.GHOST_EMAIL_PASSWORD
+               }              
+             }
+            },
+        database: {
+            client: 'sqlite3',
+            connection: {
+                filename: path.join(__dirname, '/content/data/ghost.db')
+            },
+            debug: false
+        },
+
+        server: {
+            // Host to be passed to node's `net.Server#listen()`
+            host: '0.0.0.0',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            port: '8888'
+        }
+
         database: {
             client: 'sqlite3',
             connection: {
