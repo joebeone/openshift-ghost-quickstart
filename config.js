@@ -54,21 +54,6 @@ config = {
             },
             debug: false
         },
-
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
-            host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '8888'
-        }
-
-        database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
-        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: process.env.OPENSHIFT_NODEJS_IP,
