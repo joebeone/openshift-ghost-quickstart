@@ -39,6 +39,7 @@ config = {
         url: 'http://'+process.env.OPENSHIFT_APP_DNS,
         mail: {
            transport: 'SMTP', 
+           service:  'Gmail', 
            options: {
               auth: {
                 email: process.env.GHOST_EMAIL,
