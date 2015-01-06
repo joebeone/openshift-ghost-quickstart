@@ -5,7 +5,6 @@
 var path = require('path'),
     config;
 
-console.log(process.env.GHOST_EMAIL)
 
 config = {
     // ### Development **(default)**
@@ -39,10 +38,8 @@ config = {
     production: {
         url: 'http://'+process.env.OPENSHIFT_APP_DNS,
         mail: {
-
            transport: 'SMTP', 
            options: {
-              service:  'Gmail', 
               auth: {
                 email: process.env.GHOST_EMAIL,
                 pass: process.env.GHOST_EMAIL_PASSWORD
