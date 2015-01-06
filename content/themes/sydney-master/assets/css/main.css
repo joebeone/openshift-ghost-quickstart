@@ -168,7 +168,7 @@ a:after {
        
 }
 
-#avatar.img { 
+#avatar .img { 
          -webkit-filter: grayscale(100%);
          -moz-filter: grayscale(100%);
           filter: grayscale(100%);
