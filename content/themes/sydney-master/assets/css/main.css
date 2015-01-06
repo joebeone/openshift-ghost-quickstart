@@ -10,7 +10,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 
 body {
-  	background-color: #e7e7e7;
+  	background-color: #e2edde;
   	font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -64,7 +64,7 @@ code {
 
 /* Links */
 a {
-    color: #09a0ef;
+    color: #70a659;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -110,8 +110,8 @@ a:after {
 }
 
 .navbar-inverse {
-	background-color: #09a0ef;
-	border-color: #0993ef;
+	background-color: #70a659;
+	border-color: #8db87a;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -137,7 +137,7 @@ a:after {
 }
 
 .progress-bar-theme {
-  background-color: #09a0ef;
+  background-color: #70a659;
 }
 
 
@@ -164,5 +164,14 @@ a:after {
 
 #avatar {
 	border-radius: 206px;
-	border: solid #0993ef 10px;
+	border: solid #8db87a 5px;
+       
 }
+
+#avatar.img { 
+         -webkit-filter: grayscale(100%);
+         -moz-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+
