@@ -100,7 +100,6 @@ a:after {
 }
 
 .navbar {
-	text-transform: uppercase;
 	margin-bottom: 0px;
 }
 
@@ -125,11 +124,15 @@ a:after {
 .navbar-brand {
 	font-weight: 700;
 	font-size: 20px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .navbar-inverse .navbar-brand {
 	color: white;
+}
+
+.navbar-right{
+        text-transform: uppercase;
 }
 
 .navbar-inverse .navbar-toggle {
